@@ -31,6 +31,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Metrics.py" />
+    <Compile Include="processing\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\2.7" />
@@ -39,10 +42,12 @@
     <Folder Include="data\" />
     <Folder Include="interface\" />
     <Folder Include="loading\" />
+    <Folder Include="processing\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\jumpingjacks.0001.png" />
     <Content Include="data\jumpingjacks.mov" />
+    <Content Include="README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
