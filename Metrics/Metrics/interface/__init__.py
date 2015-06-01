@@ -2,17 +2,17 @@ import cv2
 import numpy
 
 def DisplayImage(image, name):
-    cv2.imshow(str(name), image)
+    cv2.imshow(name, image)
     inputKey = cv2.waitKey(0)
     if inputKey == 27: # ESC key
-        cv2.destroyWindow(str(name))
+        cv2.destroyWindow(name)
 
 def DisplayEditableImage(image, name):
     editableImage = image
-    cv2.namedWindow(str(name))
+    cv2.namedWindow(name)
     editableImage = image
-    cv2.setMouseCallback(str(name), DrawDot, [image, name])
-    DisplayImage(image, str(name))
+    cv2.setMouseCallback(name, DrawDot, [image, name])
+    DisplayImage(image, name)
 
 def DrawDot(event, x, y, flags, parameters):
     image = parameters[0]
